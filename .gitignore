@@ -5,5 +5,5 @@ log/*.log
 tmp/
 .idea
 *~
-public
+public/assets
 
