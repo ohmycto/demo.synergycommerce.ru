@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+        
+
+        Rake::Task["db:load_dir"].invoke( "default" )
+        puts "Default data has been loaded"
