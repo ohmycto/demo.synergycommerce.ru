@@ -1,6 +1,13 @@
 GIT
+  remote: git://github.com/romul/spree-enhanced-option-types.git
+  revision: 60ea62bd3dec3bf04e330804fe1e0acf532a6e3d
+  specs:
+    spree_enhanced_option_types (0.50.0)
+      spree_core (>= 0.30.2)
+
+GIT
   remote: git://github.com/romul/spree-reviews.git
-  revision: 5bd7d0b62425a3d6143257a933dfe199ef5b0ff8
+  revision: 4a7aa5066511d5d326e47faf7adaca2211087ec3
   specs:
     spree_reviews (0.50.1)
       spree_core (>= 0.50.0)
@@ -29,18 +36,12 @@ GIT
 
 GIT
   remote: git://github.com/romul/synergy_default_theme.git
-  revision: d5ede51bf9bf125f0ffba1034e78bd66e477db96
+  revision: 3168841c47590ab0d4d3b1c2c4d4caaba642a0fc
   specs:
     synergy_default_theme (1.0.0)
       dalli (~> 1.0.3)
       spree_core (>= 0.50.2)
       synergy
-
-GIT
-  remote: git://github.com/secoint/spree_flexi_variants.git
-  revision: 77ad2ab5f150401bf644805a72b526ca95f4dcf5
-  specs:
-    spree_flexi_variants (1.0.0)
 
 GIT
   remote: git://github.com/secoint/synergy.git
@@ -259,7 +260,7 @@ DEPENDENCIES
   spree_compare_products!
   spree_dynamic_sitemaps
   spree_editor
-  spree_flexi_variants!
+  spree_enhanced_option_types!
   spree_i18n!
   spree_mobile_views!
   spree_online_support
