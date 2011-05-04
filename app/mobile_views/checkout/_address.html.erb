@@ -1,0 +1,52 @@
+<%  @addresses = current_user ? current_user.addresses : [] %>
+<fieldset id="shipping">
+  <legend><%= t("shipping_address")%></legend>
+  <div class="select_address">
+    <p class="field">
+      <% if @addresses.present? %>
+        <% @addresses.each do |address| %>
+        <span id="<%= ['shipping', dom_id(address)].join('_') %>">
+          <label><%= form.radio_button "ship_address_id", address.id %> <%= address %></label> <%= link_to t(:remove), address, :method => :delete, :remote => true %><br />
+        </span>
+        <% end %>
+        <label><%= form.radio_button "ship_address_id", 0 %> <%= t('other_address') %></label>
+      <% end %>
+    </p>
+  </div>
+  <%= form.fields_for :ship_address do |address_form| %>
+    <div class="inner">
+      <p class="field">&nbsp;</p>
+      <%= render :partial => 'addresses/form', :locals => {
+        :address_name => 'ship_address',
+        :address_form => address_form,
+        :address => @order.ship_address
+      } %>    
+    </div>
+  <% end %>
+</fieldset>
+
+<input type="submit" value="<%=t("save_and_continue") %>" />
+
+<% if @addresses.present? %>
+  <%= javascript_tag do %>
+  $(document).ready(function(){
+    $(".inner input").attr('disabled', 'disabled');
+    $(".inner select").attr('disabled', 'disabled');
+    $(".inner").hide();
+    
+    
+    $("input[name='order[ship_address_id]']:radio").change(function(){
+      if ($("input[name='order[ship_address_id]']:checked").val() == '0') {
+        $("#shipping .inner input").removeAttr('disabled');
+        $("#shipping .inner select").removeAttr('disabled');
+        $("#shipping .inner").fadeIn();
+      } else {
+        $("#shipping .inner input").attr('disabled', 'disabled');
+        $("#shipping .inner select").attr('disabled', 'disabled');
+        $("#shipping .inner").fadeOut();        
+      }
+    });
+    
+  });
+  <% end %>
+<% end %>
