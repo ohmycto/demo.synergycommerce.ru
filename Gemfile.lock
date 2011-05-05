@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/romul/synergy_default_theme.git
-  revision: 3168841c47590ab0d4d3b1c2c4d4caaba642a0fc
+  revision: d0fc9e6aaa6186a1bda5a711bf217b0487fd16ae
   specs:
     synergy_default_theme (1.0.0)
       dalli (~> 1.0.3)
