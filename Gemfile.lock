@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/romul/spree-enhanced-option-types.git
-  revision: 60ea62bd3dec3bf04e330804fe1e0acf532a6e3d
-  specs:
-    spree_enhanced_option_types (0.50.0)
-      spree_core (>= 0.30.2)
-
-GIT
   remote: git://github.com/romul/spree-reviews.git
   revision: 4a7aa5066511d5d326e47faf7adaca2211087ec3
   specs:
@@ -260,7 +253,6 @@ DEPENDENCIES
   spree_compare_products!
   spree_dynamic_sitemaps
   spree_editor
-  spree_enhanced_option_types!
   spree_i18n!
   spree_mobile_views!
   spree_online_support
