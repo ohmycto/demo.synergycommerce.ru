@@ -25,7 +25,7 @@ task :copy_shared_files, roles => :app do
   run "cp #{db_config} #{release_path}/config/database.yml -f"
   #run "cp #{shared_path}/Gemfile #{release_path}/Gemfile -f"
   #run "cp #{shared_path}/Gemfile.lock #{release_path}/Gemfile.lock -f"
-  run "cp #{shared_path}/production.rb #{release_path}/config/production.rb -f"
+  #run "cp #{shared_path}/production.rb #{release_path}/config/production.rb -f"
   run "ln -s #{shared_path}/assets #{release_path}/public/assets"
   run "ln -s #{shared_path}/api #{release_path}/app/controllers/api"
 end
@@ -70,7 +70,7 @@ namespace :deploy do
   end
 
   desc "Update application"
-  task :update, :roles => :app do
+  task :update_gems, :roles => :app do
     run ["cd #{dpath}/current",
         "#{bundler} update",
         "#{rake} synergy_default_theme:install"].join(" && ")    
