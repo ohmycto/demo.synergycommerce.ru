@@ -13,6 +13,7 @@ gem 'yaml_db'
 #gem 'system_timer'
 gem 'dalli'
 # gem 'newrelic_rpm'
+gem "hoptoad_notifier", "~> 2.3"
 
 # Use unicorn as the web server
 # gem 'unicorn'

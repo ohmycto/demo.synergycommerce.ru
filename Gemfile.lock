@@ -159,6 +159,9 @@ GEM
     faker (0.9.5)
       i18n (~> 0.4)
     highline (1.5.1)
+    hoptoad_notifier (2.4.9)
+      activesupport
+      builder
     i18n (0.5.0)
     jquery-rails (0.2.6)
       rails (~> 3.0)
@@ -243,6 +246,7 @@ PLATFORMS
 
 DEPENDENCIES
   dalli
+  hoptoad_notifier (~> 2.3)
   mysql2 (= 0.2.7)
   rails (= 3.0.7)
   russian

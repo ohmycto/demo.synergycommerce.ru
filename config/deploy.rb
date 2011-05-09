@@ -69,8 +69,18 @@ namespace :deploy do
     run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}`"
   end
 
+  desc "Update application"
+  task :update, :roles => :app do
+    run ["cd #{dpath}/current",
+        "#{bundler} update",
+        "#{rake} synergy_default_theme:install"].join(" && ")    
+  end
+
   desc "Restart Application"
   task :restart, :roles => :app do
     run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}` && #{unicorn_rails} -Dc #{unicorn_conf}"
   end
 end
+
+require './config/boot'
+require 'hoptoad_notifier/capistrano'
