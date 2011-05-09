@@ -81,6 +81,3 @@ namespace :deploy do
     run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}` && #{unicorn_rails} -Dc #{unicorn_conf}"
   end
 end
-
-require './config/boot'
-require 'hoptoad_notifier/capistrano'
