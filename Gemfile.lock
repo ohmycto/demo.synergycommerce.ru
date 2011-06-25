@@ -1,25 +1,18 @@
 GIT
   remote: git://github.com/romul/spree-reviews.git
-  revision: 8bb248a2733fd330077772aa51de68b485de4986
+  revision: 819a35f495a57b1f80c37d650db557fa74f0cb6a
   specs:
     spree_reviews (0.50.1)
       spree_core (>= 0.50.0)
 
 GIT
-  remote: git://github.com/romul/spree_address_book.git
-  revision: 5b9b989a7ec2dd8f68ed9c4e704bab82675a6c0c
-  specs:
-    spree_address_book (0.50.0)
-      spree_auth (>= 0.50.0)
-      spree_core (>= 0.50.0)
-
-GIT
   remote: git://github.com/romul/spree_advanced_cart.git
-  revision: 5f3365cf48594a72a3456f30fff0aa31ebba85ca
+  revision: c84b330aa7f2e2a79a8abee0f92f6f5765f12774
   specs:
     spree_advanced_cart (0.40.0)
       spree_core (>= 0.40.0)
       spree_promo (>= 0.40.0)
+      zip-code-info (>= 0.1.0)
 
 GIT
   remote: git://github.com/romul/spree_compare_products.git
@@ -29,89 +22,82 @@ GIT
       spree_core (>= 0.40.99)
 
 GIT
-  remote: git://github.com/romul/spree_editor.git
-  revision: da5c7fcb980d39a2e0f71a7f132463c28ef8c665
-  specs:
-    spree_editor (0.50.0)
-      spree_core (>= 0.40.0)
-
-GIT
   remote: git://github.com/romul/spree_mobile_views.git
-  revision: 9e56714f2c7ca00057eb48227c41c3a45ba0187a
+  revision: 3885b0c406f5d851ade9ff2d3724851ace5cccbe
   specs:
-    spree_mobile_views (0.50.1)
+    spree_mobile_views (0.50.2)
       spree_core (>= 0.50.0)
 
 GIT
   remote: git://github.com/romul/synergy_default_theme.git
-  revision: 3d2daa4ea9fcfb325751100476b5f3cf8bfe0adc
+  revision: b810a7786ee616c3f7d2f916ef53fc2b4d8d5265
   specs:
-    synergy_default_theme (1.0.0)
+    synergy_default_theme (1.0.1)
       dalli (~> 1.0.3)
       synergy
 
 GIT
   remote: git://github.com/secoint/synergy.git
-  revision: f26ff6c51e71205ad13ff5b3d80ce1ccf6c820fc
+  revision: fd26081de59fe0f67e100728680a64eab70a88a6
   specs:
-    synergy (0.50.0.rc2)
-      json (= 1.5.1)
-      nokogiri (= 1.4.4)
-      russian (= 0.2.7)
-      spree (>= 0.50.2)
-      spree_address_book (~> 0.50.0)
+    synergy (0.60.0.RC1)
+      json (~> 1.5.1)
+      nokogiri (~> 1.4.4)
+      spree (~> 0.60.0)
+      spree_address_book (~> 0.50.1)
       spree_dynamic_sitemaps (~> 0.50.1)
-      spree_editor (~> 0.50.0)
+      spree_editor (~> 0.50.1)
       spree_online_support (~> 0.50.0)
-      spree_robokassa (~> 0.50.0)
-      spree_static_content (~> 0.40.2)
+      spree_robokassa (~> 0.50.2)
+      spree_static_content (~> 0.60.1)
       spree_yandex_market (~> 1.2.0)
+      synergy_russian (= 0.2.8)
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 0ece81f5eaf2514823f20ff42729f5f0e27e6c3f
+  revision: 676b5c47990caad4483659ba4eff52c76a2e73ed
   branch: 0-60-stable
   specs:
-    spree (0.60.0.RC1)
-      spree_api (= 0.60.0.RC1)
-      spree_auth (= 0.60.0.RC1)
-      spree_core (= 0.60.0.RC1)
-      spree_dash (= 0.60.0.RC1)
-      spree_promo (= 0.60.0.RC1)
-      spree_sample (= 0.60.0.RC1)
-    spree_api (0.60.0.RC1)
-      spree_auth (= 0.60.0.RC1)
-      spree_core (= 0.60.0.RC1)
-    spree_auth (0.60.0.RC1)
+    spree (0.60.1)
+      spree_api (= 0.60.1)
+      spree_auth (= 0.60.1)
+      spree_core (= 0.60.1)
+      spree_dash (= 0.60.1)
+      spree_promo (= 0.60.1)
+      spree_sample (= 0.60.1)
+    spree_api (0.60.1)
+      spree_auth (= 0.60.1)
+      spree_core (= 0.60.1)
+    spree_auth (0.60.1)
       cancan (= 1.6.4)
       devise (= 1.3.3)
-      spree_core (= 0.60.0.RC1)
-    spree_core (0.60.0.RC1)
-      activemerchant (= 1.14.0)
+      spree_core (= 0.60.1)
+    spree_core (0.60.1)
+      activemerchant (= 1.15.0)
       acts_as_list (= 0.1.2)
       faker (= 0.9.5)
       highline (= 1.5.1)
       jquery-rails (= 0.2.6)
       meta_search (= 1.0.5)
-      nested_set (= 1.6.4)
-      paperclip (= 2.3.8)
-      rails (= 3.0.7)
+      nested_set (= 1.6.7)
+      paperclip (= 2.3.11)
+      rails (= 3.0.9)
       rd_find_by_param (= 0.1.1)
       rd_resource_controller
       rd_unobtrusive_date_picker (= 0.1.0)
       state_machine (= 0.9.4)
       stringex (= 1.0.3)
       will_paginate (= 3.0.pre2)
-    spree_dash (0.60.0.RC1)
-      spree_core (= 0.60.0.RC1)
-    spree_promo (0.60.0.RC1)
-      spree_core (= 0.60.0.RC1)
-    spree_sample (0.60.0.RC1)
-      spree_core (= 0.60.0.RC1)
+    spree_dash (0.60.1)
+      spree_core (= 0.60.1)
+    spree_promo (0.60.1)
+      spree_core (= 0.60.1)
+    spree_sample (0.60.1)
+      spree_core (= 0.60.1)
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
-  revision: b9135cc55efc2758e6ecb0a5dfa7e8aa566053c5
+  revision: f8f65ad6f68c3c753411ba1f73aa32e3c02bb5ef
   specs:
     spree_i18n (1.0.0)
       spree_core (>= 0.30.0)
@@ -123,24 +109,16 @@ GIT
     spree_recently_viewed (1.1)
       spree_core (>= 0.40.0)
 
-GIT
-  remote: git://github.com/spree/spree_static_content.git
-  revision: 5d074bbd1b7a26676c47980f833257058e645bd8
-  specs:
-    spree_static_content (0.40.2)
-      spree_core (>= 0.30.0)
-      spree_editor
-
 GEM
   remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
-    actionmailer (3.0.7)
-      actionpack (= 3.0.7)
-      mail (~> 2.2.15)
-    actionpack (3.0.7)
-      activemodel (= 3.0.7)
-      activesupport (= 3.0.7)
+    actionmailer (3.0.9)
+      actionpack (= 3.0.9)
+      mail (~> 2.2.19)
+    actionpack (3.0.9)
+      activemodel (= 3.0.9)
+      activesupport (= 3.0.9)
       builder (~> 2.1.2)
       erubis (~> 2.6.6)
       i18n (~> 0.5.0)
@@ -148,31 +126,31 @@ GEM
       rack-mount (~> 0.6.14)
       rack-test (~> 0.5.7)
       tzinfo (~> 0.3.23)
-    activemerchant (1.14.0)
+    activemerchant (1.15.0)
       activesupport (>= 2.3.8)
       braintree (>= 2.0.0)
       builder (>= 2.0.0)
-    activemodel (3.0.7)
-      activesupport (= 3.0.7)
+    activemodel (3.0.9)
+      activesupport (= 3.0.9)
       builder (~> 2.1.2)
       i18n (~> 0.5.0)
-    activerecord (3.0.7)
-      activemodel (= 3.0.7)
-      activesupport (= 3.0.7)
-      arel (~> 2.0.2)
+    activerecord (3.0.9)
+      activemodel (= 3.0.9)
+      activesupport (= 3.0.9)
+      arel (~> 2.0.10)
       tzinfo (~> 0.3.23)
-    activeresource (3.0.7)
-      activemodel (= 3.0.7)
-      activesupport (= 3.0.7)
-    activesupport (3.0.7)
+    activeresource (3.0.9)
+      activemodel (= 3.0.9)
+      activesupport (= 3.0.9)
+    activesupport (3.0.9)
     acts_as_list (0.1.2)
-    arel (2.0.9)
+    arel (2.0.10)
     bcrypt-ruby (2.1.4)
-    braintree (2.10.0)
-      builder
+    braintree (2.10.1)
+      builder (>= 2.0.0)
     builder (2.1.2)
     cancan (1.6.4)
-    dalli (1.0.3)
+    dalli (1.0.5)
     devise (1.3.3)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
@@ -181,15 +159,19 @@ GEM
       abstract (>= 1.0.0)
     faker (0.9.5)
       i18n (~> 0.4)
+    formtastic (1.2.4)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
     highline (1.5.1)
-    hoptoad_notifier (2.4.9)
+    hoptoad_notifier (2.4.11)
       activesupport
       builder
     i18n (0.5.0)
     jquery-rails (0.2.6)
       rails (~> 3.0)
       thor (~> 0.14.4)
-    json (1.5.1)
+    json (1.5.3)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -202,59 +184,72 @@ GEM
       arel (~> 2.0.2)
     mime-types (1.16)
     mysql2 (0.2.7)
-    nested_set (1.6.4)
+    nested_set (1.6.7)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
-    nokogiri (1.4.4)
+    nokogiri (1.4.6)
     orm_adapter (0.0.5)
-    paperclip (2.3.8)
-      activerecord
-      activesupport
+    paperclip (2.3.11)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
     polyglot (0.3.1)
-    rack (1.2.2)
+    rack (1.2.3)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
       rack (>= 1.0)
-    rails (3.0.7)
-      actionmailer (= 3.0.7)
-      actionpack (= 3.0.7)
-      activerecord (= 3.0.7)
-      activeresource (= 3.0.7)
-      activesupport (= 3.0.7)
+    rails (3.0.9)
+      actionmailer (= 3.0.9)
+      actionpack (= 3.0.9)
+      activerecord (= 3.0.9)
+      activeresource (= 3.0.9)
+      activesupport (= 3.0.9)
       bundler (~> 1.0)
-      railties (= 3.0.7)
-    railties (3.0.7)
-      actionpack (= 3.0.7)
-      activesupport (= 3.0.7)
+      railties (= 3.0.9)
+    railties (3.0.9)
+      actionpack (= 3.0.9)
+      activesupport (= 3.0.9)
       rake (>= 0.8.7)
+      rdoc (~> 3.4)
       thor (~> 0.14.4)
-    rake (0.8.7)
+    rake (0.9.2)
     rd_find_by_param (0.1.1)
       activerecord (~> 3.0)
       activesupport (~> 3.0)
     rd_resource_controller (1.0.1)
     rd_unobtrusive_date_picker (0.1.0)
+    rdoc (3.6.1)
     russian (0.2.7)
+    spree_address_book (0.50.2)
+      spree_auth (>= 0.50.0)
+      spree_core (>= 0.50.0)
     spree_dynamic_sitemaps (0.50.1)
+    spree_editor (0.50.1)
+      spree_core (>= 0.40.0)
     spree_online_support (0.50.0)
       spree_core (>= 0.40.3)
-    spree_robokassa (0.50.0)
-      spree_core (>= 0.30.1)
+    spree_robokassa (0.50.2)
+      spree_core (>= 0.40.0)
+    spree_static_content (0.60.1)
+      formtastic (~> 1.2.3)
+      spree_core (>= 0.60.0)
+      spree_editor (>= 0.50.0)
     spree_yandex_market (1.2.0)
       nokogiri (~> 1.4.0)
       spree_core (>= 0.50.0)
     sqlite3 (1.3.3)
     state_machine (0.9.4)
     stringex (1.0.3)
+    synergy_russian (0.2.8)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.27)
+    tzinfo (0.3.28)
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
     yaml_db (0.2.1)
+    zip-code-info (0.1.0)
 
 PLATFORMS
   ruby
@@ -263,21 +258,21 @@ DEPENDENCIES
   dalli
   hoptoad_notifier (~> 2.3)
   mysql2 (= 0.2.7)
-  rails (= 3.0.7)
+  rails (~> 3.0)
   russian
   spree!
-  spree_address_book!
+  spree_address_book
   spree_advanced_cart!
   spree_compare_products!
   spree_dynamic_sitemaps
-  spree_editor!
+  spree_editor
   spree_i18n!
   spree_mobile_views!
   spree_online_support
   spree_recently_viewed!
   spree_reviews!
   spree_robokassa
-  spree_static_content!
+  spree_static_content
   spree_yandex_market
   sqlite3
   synergy!

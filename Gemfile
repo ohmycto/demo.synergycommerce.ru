@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,7 +14,6 @@ gem 'yaml_db'
 gem 'dalli'
 # gem 'newrelic_rpm'
 gem "hoptoad_notifier", "~> 2.3"
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -40,12 +39,12 @@ gem "hoptoad_notifier", "~> 2.3"
 
 gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
-gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
-gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
+gem 'spree_static_content'
+gem 'spree_editor'
 gem 'spree_online_support'
 gem 'spree_robokassa'
 gem 'spree_yandex_market'
-gem 'spree_address_book', :git => 'git://github.com/romul/spree_address_book.git'
+gem 'spree_address_book'
 gem 'spree_dynamic_sitemaps'
 #gem 'spree_enhanced_option_types', :git => 'git://github.com/romul/spree-enhanced-option-types.git'
 gem 'spree_compare_products', :git => 'git://github.com/romul/spree_compare_products.git'
@@ -53,5 +52,7 @@ gem 'spree_reviews', :git => 'git://github.com/romul/spree-reviews.git'
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
 gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
 gem 'spree_advanced_cart', :git => 'git://github.com/romul/spree_advanced_cart.git'
+
+
 gem 'synergy', :git => 'git://github.com/secoint/synergy.git'
 gem 'synergy_default_theme', :git => 'git://github.com/romul/synergy_default_theme.git'
