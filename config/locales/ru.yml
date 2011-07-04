@@ -1,0 +1,5 @@
+ru:
+  activerecord: 
+    attributes: 
+      review: 
+        name: "Имя"
