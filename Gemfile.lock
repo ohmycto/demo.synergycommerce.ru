@@ -101,6 +101,13 @@ GIT
     spree_recently_viewed (1.1)
       spree_core (>= 0.40.0)
 
+GIT
+  remote: git@github.com:secoint/synergy_inventory_management.git
+  revision: 5f8882f895560fccb04ae98bfffd32e26aa2ed47
+  specs:
+    synergy_inventory_management (0.2)
+      spree_core (>= 0.60.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -265,4 +272,5 @@ DEPENDENCIES
   sqlite3
   synergy!
   synergy_default_theme (= 1.0.2)
+  synergy_inventory_management!
   yaml_db

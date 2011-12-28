@@ -47,7 +47,7 @@ gem 'spree_reviews', :git => 'git://github.com/romul/spree-reviews.git'
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
 gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
 gem 'spree_advanced_cart', :git => 'git://github.com/romul/spree_advanced_cart.git'
-
+gem 'synergy_inventory_management', :git => 'git@github.com:secoint/synergy_inventory_management.git'
 
 gem 'synergy', :git => "git://github.com/secoint/synergy.git"
 gem 'synergy_default_theme', '1.0.2'
