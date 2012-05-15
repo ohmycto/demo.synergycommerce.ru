@@ -15,13 +15,6 @@ GIT
       zip-code-info (>= 0.1.0)
 
 GIT
-  remote: git://github.com/romul/spree_compare_products.git
-  revision: 2ad17e813790cdd6b9aef567e3e8cee3d523b23d
-  specs:
-    spree_compare_products (0.40.90)
-      spree_core (>= 0.40.99)
-
-GIT
   remote: git://github.com/romul/spree_mobile_views.git
   revision: 3885b0c406f5d851ade9ff2d3724851ace5cccbe
   specs:
@@ -30,11 +23,13 @@ GIT
 
 GIT
   remote: git://github.com/secoint/synergy.git
-  revision: 1eaba6519ea4f2b41b4a29ed837397350e7171a7
+  revision: a1723e69d8ab4bf4ed551ba887d64e37aaefef5d
+  branch: 0-60-stable
   specs:
-    synergy (0.60.0)
+    synergy (0.60.1)
       json (~> 1.5.1)
       nokogiri (~> 1.4.4)
+      ru_propisju (~> 1.1.0)
       spree (~> 0.60.0)
       spree_address_book (~> 0.50.1)
       spree_dynamic_sitemaps (~> 0.50.1)
@@ -46,50 +41,17 @@ GIT
       synergy_russian (= 0.2.8)
 
 GIT
-  remote: git://github.com/spree/spree.git
-  revision: 676b5c47990caad4483659ba4eff52c76a2e73ed
-  branch: 0-60-stable
+  remote: git://github.com/secoint/synergy_inventory_management.git
+  revision: 486bf5819ecd92311a66424b4d9707d215dc02c7
+  branch: 0-60
   specs:
-    spree (0.60.1)
-      spree_api (= 0.60.1)
-      spree_auth (= 0.60.1)
-      spree_core (= 0.60.1)
-      spree_dash (= 0.60.1)
-      spree_promo (= 0.60.1)
-      spree_sample (= 0.60.1)
-    spree_api (0.60.1)
-      spree_auth (= 0.60.1)
-      spree_core (= 0.60.1)
-    spree_auth (0.60.1)
-      cancan (= 1.6.4)
-      devise (= 1.3.3)
-      spree_core (= 0.60.1)
-    spree_core (0.60.1)
-      activemerchant (= 1.15.0)
-      acts_as_list (= 0.1.2)
-      faker (= 0.9.5)
-      highline (= 1.5.1)
-      jquery-rails (= 0.2.6)
-      meta_search (= 1.0.5)
-      nested_set (= 1.6.7)
-      paperclip (= 2.3.11)
-      rails (= 3.0.9)
-      rd_find_by_param (= 0.1.1)
-      rd_resource_controller
-      rd_unobtrusive_date_picker (= 0.1.0)
-      state_machine (= 0.9.4)
-      stringex (= 1.0.3)
-      will_paginate (= 3.0.pre2)
-    spree_dash (0.60.1)
-      spree_core (= 0.60.1)
-    spree_promo (0.60.1)
-      spree_core (= 0.60.1)
-    spree_sample (0.60.1)
-      spree_core (= 0.60.1)
+    synergy_inventory_management (0.2)
+      spree_core (>= 0.60.1)
 
 GIT
   remote: git://github.com/spree/spree_i18n.git
   revision: a185d160047ce54f07bd47f7d417d9e2681fbb07
+  ref: a185d160047ce54f07bd47f7d417d9e2681fbb07
   specs:
     spree_i18n (1.0.0)
       spree_core (>= 0.30.0)
@@ -101,23 +63,16 @@ GIT
     spree_recently_viewed (1.1)
       spree_core (>= 0.40.0)
 
-GIT
-  remote: git@github.com:secoint/synergy_inventory_management.git
-  revision: 5f8882f895560fccb04ae98bfffd32e26aa2ed47
-  specs:
-    synergy_inventory_management (0.2)
-      spree_core (>= 0.60.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
-    actionmailer (3.0.9)
-      actionpack (= 3.0.9)
+    actionmailer (3.0.10)
+      actionpack (= 3.0.10)
       mail (~> 2.2.19)
-    actionpack (3.0.9)
-      activemodel (= 3.0.9)
-      activesupport (= 3.0.9)
+    actionpack (3.0.10)
+      activemodel (= 3.0.10)
+      activesupport (= 3.0.10)
       builder (~> 2.1.2)
       erubis (~> 2.6.6)
       i18n (~> 0.5.0)
@@ -129,26 +84,35 @@ GEM
       activesupport (>= 2.3.8)
       braintree (>= 2.0.0)
       builder (>= 2.0.0)
-    activemodel (3.0.9)
-      activesupport (= 3.0.9)
+    activemodel (3.0.10)
+      activesupport (= 3.0.10)
       builder (~> 2.1.2)
       i18n (~> 0.5.0)
-    activerecord (3.0.9)
-      activemodel (= 3.0.9)
-      activesupport (= 3.0.9)
+    activerecord (3.0.10)
+      activemodel (= 3.0.10)
+      activesupport (= 3.0.10)
       arel (~> 2.0.10)
       tzinfo (~> 0.3.23)
-    activeresource (3.0.9)
-      activemodel (= 3.0.9)
-      activesupport (= 3.0.9)
-    activesupport (3.0.9)
+    activeresource (3.0.10)
+      activemodel (= 3.0.10)
+      activesupport (= 3.0.10)
+    activesupport (3.0.10)
     acts_as_list (0.1.2)
+    airbrake (3.0.9)
+      activesupport
+      builder
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
-    braintree (2.10.1)
+    braintree (2.16.0)
       builder (>= 2.0.0)
     builder (2.1.2)
     cancan (1.6.4)
+    capistrano (2.12.0)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     dalli (1.0.5)
     devise (1.3.3)
       bcrypt-ruby (~> 2.1.2)
@@ -163,14 +127,12 @@ GEM
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
     highline (1.5.1)
-    hoptoad_notifier (2.4.11)
-      activesupport
-      builder
     i18n (0.5.0)
     jquery-rails (0.2.6)
       rails (~> 3.0)
       thor (~> 0.14.4)
-    json (1.5.3)
+    json (1.5.4)
+    kgio (2.7.4)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -181,54 +143,102 @@ GEM
       activerecord (~> 3.0.2)
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
-    mime-types (1.16)
+    mime-types (1.18)
     mysql2 (0.2.11)
     nested_set (1.6.7)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.3.0)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
     nokogiri (1.4.7)
-    orm_adapter (0.0.5)
+    orm_adapter (0.0.7)
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
-    polyglot (0.3.1)
-    rack (1.2.3)
+    polyglot (0.3.3)
+    rack (1.2.5)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
       rack (>= 1.0)
-    rails (3.0.9)
-      actionmailer (= 3.0.9)
-      actionpack (= 3.0.9)
-      activerecord (= 3.0.9)
-      activeresource (= 3.0.9)
-      activesupport (= 3.0.9)
+    rails (3.0.10)
+      actionmailer (= 3.0.10)
+      actionpack (= 3.0.10)
+      activerecord (= 3.0.10)
+      activeresource (= 3.0.10)
+      activesupport (= 3.0.10)
       bundler (~> 1.0)
-      railties (= 3.0.9)
-    railties (3.0.9)
-      actionpack (= 3.0.9)
-      activesupport (= 3.0.9)
+      railties (= 3.0.10)
+    railties (3.0.10)
+      actionpack (= 3.0.10)
+      activesupport (= 3.0.10)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.4)
-    rake (0.9.2)
+    raindrops (0.8.1)
+    rake (0.9.2.2)
     rd_find_by_param (0.1.1)
       activerecord (~> 3.0)
       activesupport (~> 3.0)
     rd_resource_controller (1.0.1)
     rd_unobtrusive_date_picker (0.1.0)
-    rdoc (3.8)
+    rdoc (3.12)
+      json (~> 1.4)
+    ru_propisju (1.1.0)
     russian (0.2.7)
+    spree (0.60.6)
+      spree_api (= 0.60.6)
+      spree_auth (= 0.60.6)
+      spree_core (= 0.60.6)
+      spree_dash (= 0.60.6)
+      spree_promo (= 0.60.6)
+      spree_sample (= 0.60.6)
     spree_address_book (0.50.2)
       spree_auth (>= 0.50.0)
       spree_core (>= 0.50.0)
+    spree_api (0.60.6)
+      spree_auth (= 0.60.6)
+      spree_core (= 0.60.6)
+    spree_auth (0.60.6)
+      cancan (= 1.6.4)
+      devise (= 1.3.3)
+      spree_core (= 0.60.6)
+    spree_compare_products (0.50.0)
+      spree_core (>= 0.50.2)
+    spree_core (0.60.6)
+      activemerchant (= 1.15.0)
+      acts_as_list (= 0.1.2)
+      faker (= 0.9.5)
+      highline (= 1.5.1)
+      jquery-rails (= 0.2.6)
+      meta_search (= 1.0.5)
+      nested_set (= 1.6.7)
+      paperclip (= 2.3.11)
+      rails (>= 3.0.10, <= 3.0.12)
+      rd_find_by_param (= 0.1.1)
+      rd_resource_controller
+      rd_unobtrusive_date_picker (= 0.1.0)
+      state_machine (= 0.9.4)
+      stringex (= 1.0.3)
+      will_paginate (= 3.0.2)
+    spree_dash (0.60.6)
+      spree_core (= 0.60.6)
     spree_dynamic_sitemaps (0.50.1)
     spree_editor (0.50.1)
       spree_core (>= 0.40.0)
     spree_online_support (0.50.0)
       spree_core (>= 0.40.3)
+    spree_promo (0.60.6)
+      spree_core (= 0.60.6)
     spree_robokassa (0.50.2)
       spree_core (>= 0.40.0)
+    spree_sample (0.60.6)
+      spree_core (= 0.60.6)
     spree_static_content (0.60.1)
       formtastic (~> 1.2.3)
       spree_core (>= 0.60.0)
@@ -236,7 +246,6 @@ GEM
     spree_yandex_market (1.2.0)
       nokogiri (~> 1.4.0)
       spree_core (>= 0.50.0)
-    sqlite3 (1.3.3)
     state_machine (0.9.4)
     stringex (1.0.3)
     synergy_default_theme (1.0.2)
@@ -244,12 +253,17 @@ GEM
       synergy
     synergy_russian (0.2.8)
     thor (0.14.6)
-    treetop (1.4.9)
+    treetop (1.4.10)
+      polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.29)
-    warden (1.0.4)
+    tzinfo (0.3.33)
+    unicorn (4.3.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    warden (1.0.6)
       rack (>= 1.0)
-    will_paginate (3.0.pre2)
+    will_paginate (3.0.2)
     yaml_db (0.2.1)
     zip-code-info (0.1.0)
 
@@ -257,20 +271,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
+  capistrano
   dalli
-  hoptoad_notifier (~> 2.3)
   mysql2 (~> 0.2.7)
-  rails
+  rails (= 3.0.10)
   russian
-  spree!
+  spree (~> 0.60.6)
   spree_advanced_cart!
-  spree_compare_products!
+  spree_compare_products
   spree_i18n!
   spree_mobile_views!
   spree_recently_viewed!
   spree_reviews!
-  sqlite3
   synergy!
   synergy_default_theme (= 1.0.2)
   synergy_inventory_management!
+  unicorn
   yaml_db
