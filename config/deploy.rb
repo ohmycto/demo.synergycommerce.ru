@@ -1,5 +1,6 @@
 # require './config/boot'
 require 'bundler/capistrano'
+require 'airbrake/capistrano'
 
 set :application, 'demo.synergycommerce'
 set :scm, :git
