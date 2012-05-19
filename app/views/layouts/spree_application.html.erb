@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <%= render 'shared/head' %>
+  <%= stylesheet_link_tag 'copyright' %>
+</head>
+<%
+   if @body_class.nil?
+     if content_for?(:sidebar)
+       @body_class = 'two-col'
+     else
+       @body_class = 'one-col'
+     end
+   end
+%>
+
+<body class="<%= @body_class %>" id="<%= @body_id %>">
+
+<div class="wrapper">
+  <div class="main_top" align="center">
+    <div class="header_panel">
+      <ul>
+        <li class="header_panel_logo">
+          <div><%= link_to image_tag("logo.png", :alt => "Synergy logo"), root_url %></div></li>
+        <li class="header_panel_search"><%= render 'shared/search' %></li>
+        <li class="header_panel_cart">
+          <div><%= link_to_cart %></div>
+        </li>
+        <% if defined?(SpreeCompareProducts) %>
+        <li class="header_panel_compare_product">
+            <div><%= link_to(t(:product_comparison, :scope => :compare_products) + (@comparable_products.size > 0 ? " (#{@comparable_products.count})" : ""),
+                             compare_products_path, :id => "compare_products") %></div>
+            <div id="tooltip" class="tooltip" style="display: none">
+              <div class="tooltip_top"></div>
+              <div class="tooltip_middle">
+                <div style="font-size: 0px">&nbsp;</div>
+                <div class="tooltip_content" id="tooltip_content"></div>
+                <div style="font-size: 0px">&nbsp;</div>
+              </div>
+              <div class="tooltip_bottom"></div>
+            </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div align="center">
+    <div class="fixed_width">
+      <div id="top_panel">
+        <div id="top_login_bar">
+          <%= hook :shared_login_bar %>
+        </div>
+        <div id="header_menu">
+          <ul class="header_menu">
+            <% for page in Page.header_links do %>
+              <li><%= link_to page.title, page.link %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <%= render :partial => 'shared/comparable_products' if defined?(SpreeCompareProducts) %>
+      <% if content_for?(:sidebar) %>
+        <div class="sidebar">
+          <%= hook :sidebar do %>
+            <%= yield :sidebar %>
+          <% end %>
+
+          <% if Page.sidebar_links.any? %>
+          <div id="sidebar_menu">
+            <ul class="sidebar_menu">
+              <% for page in Page.sidebar_links do %>
+                <li><%= link_to page.title, page.link %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+        </div>
+      <% end %>
+      <div id="content" class="content">
+        <%= flash_messages %>
+        <noscript>
+          <% if flash[:notice] %>
+            <div class="flash notice"><%= flash[:notice] %></div>
+          <% end %>
+          <% if flash[:error] %>
+            <div class="flash errors"><%= flash[:error] %></div>
+          <% end %>
+        </noscript>
+        <%= yield %>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div class="footer_fake"></div>
+</div>
+
+<div class="footer" align="center">
+<% cache 'footer_menu' do %>
+  <ul class="footer_menu">
+    <% for page in Page.footer_links do %>
+      <li><%= link_to page.title, page.link %></li>
+    <% end %>
+  </ul>
+  <div class="copyright">
+    <p>&copy; 2011&mdash;<%= Time.now.year %> <a href="http://www.secoint.ru">«Сервис и Консалтинг»</a></p>
+    <p><a href="http://centos-admin.ru">centos-admin.ru</a> - официальный партнер по администрированию серверов</p>
+  </div>
+<% end %>
+</div>
+<%= hook :footer_right %>
+<% cache 'google_analytics' do %>
+  <%= render 'shared/google_analytics' %>
+<% end %>
+</body>
+</html>
+
