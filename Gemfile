@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.0.19'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -38,7 +38,7 @@ gem 'capistrano'
 #   gem 'webrat'
 # end
 
-gem 'spree', '~> 0.60.6'
+gem 'spree', :git => 'git://github.com/secoint/spree.git', :branch => '0-60-stable'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :ref => 'a185d160047ce54f07bd47f7d417d9e2681fbb07'
 # Additional extensions
 gem 'spree_compare_products'
