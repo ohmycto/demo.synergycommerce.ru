@@ -41,6 +41,7 @@ gem 'capistrano'
 gem 'spree', :git => 'git://github.com/secoint/spree.git', :branch => '0-60-stable'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :ref => 'a185d160047ce54f07bd47f7d417d9e2681fbb07'
 # Additional extensions
+gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
 gem 'spree_compare_products'
 gem 'spree_reviews', :git => 'git://github.com/romul/spree-reviews.git'
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
