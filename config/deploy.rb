@@ -6,15 +6,15 @@ set :application, 'demo.synergycommerce'
 set :scm, :git
 set :repository, 'git@github.com:secoint/demo.synergycommerce.ru.git'
 set :deploy_to, '/work/demo'
-set :user, 'synergy'
+set :user, 'secoint'
 set :use_sudo, false
 set :unicorn_rails, 'bundle exec unicorn'
 set :unicorn_conf, "#{shared_path}/config/unicorn.rb"
 set :unicorn_pid, "#{shared_path}/pids/unicorn.pid"
 
-role :web, 'vs01.secoint.ru'
-role :app, 'vs01.secoint.ru'
-role :db, 'vs01.secoint.ru', :primary => true
+role :web, 'vs02.secoint.ru'
+role :app, 'vs02.secoint.ru'
+role :db, 'vs02.secoint.ru', :primary => true
 
 namespace(:customs) do
   task :config, :roles => :app do
